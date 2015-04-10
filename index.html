@@ -166,7 +166,7 @@ Similarly when we want to talk to someone from another country and we choose a c
 Computer programs are basically a bunch of instructions that someone wrote and distributed. Thus, the computer will follow this instructions and begin to perform them.</p>
 </div>
 <div class="paragraph">
-<p>In this first world, we will study the basics of Lua programming language, which we use to make games using the LÖVE framework.</p>
+<p>In this first world, we will study the basics of Lua scripting language, which we use to make games using the LÖVE framework.</p>
 </div>
 <div class="sect2">
 <h3 id="_what_is_lua"><a class="anchor" href="#_what_is_lua"></a>1.1. What is Lua?</h3>
@@ -188,7 +188,7 @@ and write your code there.</p>
 <h4 id="_flow"><a class="anchor" href="#_flow"></a>1.3.1. Flow</h4>
 <div class="paragraph">
 <p>When we are in school, going through all those levels, we follow a simple study sequency. Basic concepts are learned at the beginning of our school life and more complex subjetcts (which depend on the most basic) are learned ahead.
-Write code works in a similar way. We follow the same order, that is, before we try to do complex things, we have to talk to the computer how to do them.
+Writing code works in a similar way. We follow the same order, that is, before we try to do complex things, we have to tell the computer how to do them.
 A code is understood by the computer from the first to the last line. If  we ask the computer to calculates powers but do not teach it how to make a multiplication, probably it will not solve our problem.</p>
 </div>
 </div>
@@ -196,26 +196,26 @@ A code is understood by the computer from the first to the last line. If  we ask
 <h4 id="_conditions"><a class="anchor" href="#_conditions"></a>1.3.2. Conditions</h4>
 <div class="paragraph">
 <p>We can tell the computer that it chooses other paths and jump some lines.
-Think that you are lost in a field and reaches a point in front there are two possible paths. You will choose one of them by some condition. In computer programming, this concept is called <strong>conditional structure</strong>.</p>
+Think that you are lost in a field and reach a point in front there are two possible paths, say "Path A" and "Path B". You will choose either "Path A" or "Path B" by some condition. In computer programming, this concept is called <strong>conditional structure</strong>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_loops"><a class="anchor" href="#_loops"></a>1.3.3. Loops</h4>
 <div class="paragraph">
-<p>It is our usual to repeat the same idea to perform a larger task. If I ask you to make 8 cookies, you will follow a bunch of steps for each cookie to complete 8 cookies. This concept is called <strong>loop</strong>.</p>
+<p>It is common to repeat the same idea to perform a larger task. If I ask you to make 8 cookies, you will follow a bunch of steps for each cookie to complete 8 cookies. This concept is called <strong>looping</strong>. Similarly, computers use loops to perform a task multiple times.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_storing_data_in_variables"><a class="anchor" href="#_storing_data_in_variables"></a>1.4. Storing Data in Variables</h3>
 <div class="paragraph">
-<p>And now we begin the fun part ..</p>
+<p>And now we begin the fun part...</p>
 </div>
 <div class="paragraph">
 <p>We have spoken that the computer can make various tasks using some instructions. Let&#8217;s know the first key concept, <strong>the variable</strong>.</p>
 </div>
 <div class="paragraph">
-<p>When you make the cookies, you use few <strong>ingredients</strong> and some <strong>tools</strong>. Let&#8217;s start with the ingredients, which for computing, are called variables.</p>
+<p>When you make the cookies, you use a few <strong>ingredients</strong> and some <strong>utensils</strong>. Let&#8217;s start with the ingredients, which for computing, are called <strong>variables</strong>.</p>
 </div>
 <div class="paragraph">
 <p>The computer is a mathematical machine that performs tasks from data. Variables are a space that we allocate in the computer memory to store data that will be useful for us.</p>
@@ -336,8 +336,8 @@ Write Level
 <h3 id="_structure_of_a_lÖve_project"><a class="anchor" href="#_structure_of_a_lÖve_project"></a>2.1. Structure of a LÖVE Project</h3>
 <div class="paragraph">
 <p>So, what makes a LÖVE Project?<br>
-At core a LÖVE Project is just a folder containing everything needed to make the game;
-Code, Images, Sound and Video files and everything else you might need.</p>
+At its core a LÖVE Project is just a folder containing everything needed to make the game;
+Code, Images, Sound and Video files and anything else you might need.</p>
 </div>
 <div class="sect3">
 <h4 id="_code"><a class="anchor" href="#_code"></a>2.1.1. Code</h4>
@@ -355,13 +355,13 @@ Generally Lua Source Files (<code>.lua</code>) can lay around anywhere in the pr
 <div class="paragraph">
 <p>As the name implies this file will contain all your <strong>main code</strong> - what exactly that will be and how you organize your code is up to you.
 Usually this file contains the used <em>Callback Routines</em>, which will be covered in <a href="#world2-2">World 2-2</a>.
-For smaller projects and the next levels in this book this will be the only file (except for <code>conf.lua</code>) you will need.</p>
+For smaller projects and the next levels in this book this will be the only file (except for <code>conf.lua</code>) that you will need.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_conf_lua"><a class="anchor" href="#_conf_lua"></a>conf.lua</h5>
 <div class="paragraph">
-<p><em>conf</em> is short for <strong>Conf</strong>iguration, and thats what <code>conf.lua</code> is all about.
+<p><em>conf</em> is short for <strong>Conf</strong>iguration, and that&#8217;s what <code>conf.lua</code> is all about.
 You can fill this file with a function called <code>love.conf( t )</code> that accepts a table as it&#8217;s only parameter.
 In that function you can then modify certain fields of the table and thereby change the configuration the LÖVE Framework uses when it first creates your window.</p>
 </div>
@@ -373,7 +373,7 @@ In that function you can then modify certain fields of the table and thereby cha
 <div class="content">
 <pre class="pygments highlight"><code data-lang="lua"><span class="tok-k">function</span> <span class="tok-nc">love</span><span class="tok-p">.</span><span class="tok-nf">conf</span><span class="tok-p">(</span><span class="tok-n">t</span><span class="tok-p">)</span>
     <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">identity</span> <span class="tok-o">=</span> <span class="tok-kc">nil</span>                   <span class="tok-c1">-- The name of the save directory (string)</span>
-    <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">version</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">0.9.1&quot;</span>                <span class="tok-c1">-- The LÖVE version this game was made for (string)</span>
+    <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">version</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">0.9.2&quot;</span>                <span class="tok-c1">-- The LÖVE version this game was made for (string)</span>
     <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">console</span> <span class="tok-o">=</span> <span class="tok-kc">false</span>                  <span class="tok-c1">-- Attach a console (boolean, Windows only)</span>
 
     <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">window</span><span class="tok-p">.</span><span class="tok-n">title</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">Untitled&quot;</span>        <span class="tok-c1">-- The window title (string)</span>
@@ -429,7 +429,7 @@ You don&#8217;t need to use a <code>conf.lua</code> or specify every key in the 
 <div class="content">
 <pre class="pygments highlight"><code data-lang="lua"><span class="tok-k">function</span> <span class="tok-nc">love</span><span class="tok-p">.</span><span class="tok-nf">conf</span><span class="tok-p">(</span> <span class="tok-n">t</span> <span class="tok-p">)</span>
     <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">identity</span>      <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">GtGLG&quot;</span>
-    <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">version</span>       <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">0.9.1&quot;</span>
+    <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">version</span>       <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">0.9.2&quot;</span>
 
     <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">window</span><span class="tok-p">.</span><span class="tok-n">title</span>  <span class="tok-o">=</span> <span class="tok-s2">&quot;</span><span class="tok-s">Gary, the green-legged Giraffe&quot;</span>
     <span class="tok-n">t</span><span class="tok-p">.</span><span class="tok-n">window</span><span class="tok-p">.</span><span class="tok-n">width</span>  <span class="tok-o">=</span> <span class="tok-mi">1200</span>
@@ -451,7 +451,7 @@ You don&#8217;t need to use a <code>conf.lua</code> or specify every key in the 
 <div class="sect3">
 <h4 id="_images_videos_sounds_and_other_assets"><a class="anchor" href="#_images_videos_sounds_and_other_assets"></a>2.1.2. Images, Videos, Sounds and other Assets</h4>
 <div class="paragraph">
-<p>All of these files need to be somewhere in the project directory aswell. You will learn to load and draw or play these files throughout this World.</p>
+<p>All of these files need to be somewhere in the project directory as well. You will learn to load and draw or play these files throughout this World.</p>
 </div>
 <div class="paragraph">
 <p>Even though you can just have all the files in one directory, it is advised that you structure your files in a logical hierarchy, for example like this:</p>
